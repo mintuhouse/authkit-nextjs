@@ -11,7 +11,7 @@ export function getCookieOptions(redirectUri, asString = false, expired = false)
     const secure = sameSite.toLowerCase() === 'none' ? true : url.protocol === 'https:';
     const maxAge = expired ? 0 : WORKOS_COOKIE_MAX_AGE ? parseInt(WORKOS_COOKIE_MAX_AGE, 10) : 60 * 60 * 24 * 400;
     return asString
-        ? `Path=/; HttpOnly; Secure=${secure}; SameSite="${sameSite}"; Max-Age=${maxAge}; Domain=${WORKOS_COOKIE_DOMAIN || ''}`
+        ? `Path=/; HttpOnly; Secure=${secure}; SameSite=${sameSite}; Max-Age=${maxAge}; Domain=${WORKOS_COOKIE_DOMAIN || ''}`
         : {
             path: '/',
             httpOnly: true,
