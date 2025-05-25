@@ -1,0 +1,12 @@
+declare const WORKOS_API_HOSTNAME: string | undefined;
+declare const WORKOS_API_HTTPS: string | undefined;
+declare const WORKOS_API_PORT: string | undefined;
+declare const WORKOS_COOKIE_DOMAIN: string | undefined;
+declare const WORKOS_COOKIE_MAX_AGE: string | undefined;
+declare const WORKOS_COOKIE_NAME: string | undefined;
+declare const WORKOS_COOKIE_SAMESITE: "lax" | "strict" | "none" | undefined;
+declare const WORKOS_API_KEY: string;
+declare const WORKOS_CLIENT_ID: string;
+declare const WORKOS_COOKIE_PASSWORD: string;
+declare const WORKOS_REDIRECT_URI: string;
+export { WORKOS_API_HOSTNAME, WORKOS_API_HTTPS, WORKOS_API_KEY, WORKOS_API_PORT, WORKOS_CLIENT_ID, WORKOS_COOKIE_DOMAIN, WORKOS_COOKIE_MAX_AGE, WORKOS_COOKIE_NAME, WORKOS_COOKIE_PASSWORD, WORKOS_REDIRECT_URI, WORKOS_COOKIE_SAMESITE, };
