@@ -40,7 +40,8 @@ export async function signOut({ returnTo }: { returnTo?: string } = {}) {
     const cookieName = WORKOS_COOKIE_NAME || 'wos-session';
     const sameSite = WORKOS_COOKIE_SAMESITE || 'lax';
     const domain = WORKOS_COOKIE_DOMAIN || /* istanbul ignore next */ undefined;
-    nextCookies.delete({ name: cookieName, domain, path: '/', sameSite });
+    const secure = sameSite.toLowerCase() === 'none' ? true : undefined;
+    nextCookies.delete({ name: cookieName, domain, path: '/', sameSite, secure });
 
     if (sessionId) {
       redirect(getWorkOS().userManagement.getLogoutUrl({ sessionId, returnTo }));
